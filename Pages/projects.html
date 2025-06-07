@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1">
+    <title> Rylan Turner's Portfolio Site </title>
+    <link rel="stylesheet" href="../portfolio.css">
+</head>
+<body>
+    <!-- Links to other pages of the site -->
+    <div class="navbar">
+        <a href="../Pages/index.html"> Home </a>
+        <a href="../Pages/aboutMe.html"> About Me </a>
+        <a href="../Pages/projects.html"> Projects </a>
+        <a href="../Pages/contactMe.html"> Contact Me </a>
+    </div>
+
+   <div class="projects">
+        <h1> Projects </h1>
+        <p> This page of the site contains a small portion of the projects I have worked on separated into 
+            their own little sections denoted by a white border. The projects toward the top will be video 
+            demonstrations of the final version of the product while towards the bottom of the page 
+            will have github repo links. None of these projects will be duplicates of others on the page. 
+            (i.e. if there is a github repo link then there will be no video demonstration. This is 
+            because the video demonstrations are being used to show projects that are easy to understand
+            through viewing while the github code repos will be used for things that are easier to 
+            understand through browsing the source code and the README file in the repo for guidance.)
+        </p>
+        <h1> Project #1: Scene It Before</h1>
+        <!-- Section for video demonstrations -->
+        <div class="videoDemoSection">
+            <div class="multipleVideos">
+                <div class="videoDemo">
+                    <video controls>
+                        <source src="../Media/SceneItBefore_WebsiteDemo.mp4" type="video/mp4"></src>
+                    </video>
+                </div>
+                <div class="videoDemo">
+                    <video controls>
+                        <source src="../Media/SceneItBefore_CollaborationCombinedTrimmed.mp4" type="video/mp4"></src>
+                    </video>
+                </div>
+            </div>
+            <div class="videoDemoText">
+                <h1> Summary </h1>
+                <p> Scene It Before is a digital stage design tool intended for planning out the look of 
+                    theatrical performances with real time collaboration in mind. I worked on this project 
+                    with 6 people on a team(including me) during a semester of college. It consists of 3 
+                    main parts. These are a website to manage user functionality, a database to manage 
+                    user relations to projects, and an editor portion built within Unity. The workflow 
+                    is that users create their accounts and projects on the website and manage 
+                    collaborators within their projects on the website as well(1st video). They are then 
+                    able to choose a project to load which will then allow them to decorate a scene and 
+                    others can load the project at the same time and be given all the updates that have 
+                    happened since they were gone and see current updates in real time through websocket 
+                    programming(2nd video). You can also switch which project you are currently in 
+                    through the unity editor instead of having to go back to the website. We ended up with 
+                    a product that is roughly 90% finished with the main updates needed being visual 
+                    enhancements as it looks a little plain and some minor bugs need fixing. 
+                </p>
+            </div>
+        </div>
+        <h1> Project #2: Client-Server Program within a Linux OS </h1>
+        <!-- Section for video demonstrations -->
+        <div class="videoDemoSection">
+            <div class="multipleVideos">
+                <div class="videoDemo">
+                    <video controls>
+                        <source src="../Media/OSProgrammingAssingment1.mp4" type="video/mp4"></src>
+                    </video>
+                </div>
+                <div class="videoDemo">
+                    <video controls>
+                        <source src="../Media/OSProgrammingAssignment2.mp4" type="video/mp4"></src>
+                    </video>
+                </div>
+            </div>
+            <div class="videoDemoText">
+                <h1> Summary </h1>
+                <p> This project had 2 installments. One was a program that handled server interactions 
+                    with a single client. The 2nd installment handled server interactions with multiple 
+                    clients. The interactions between clients and the server were handled with a FIFO pipe. 
+                    The code is also displayed at the start of the recording if you would like to pause 
+                    and take a look at that while I scroll through it. Also, to know which interface 
+                    belongs to a client or the server you can see me execute the client program or the 
+                    server program at the top of the CLI. (denoted by ./client or ./server) <br><br>
+
+                    In the first video it shows the server handling the single client and the calls I make 
+                    to the server from the client which are: 
+                    <br> 1. Establish a connection. 
+                    <br> 2. Convert the given number into text. 
+                    <br> 3. Convert the given text into number. 
+                    <br> 4. Store something on the server. (in this case the word "Manatee") 
+                    <br> 5. Return the stored item to the client. 
+                    <br> 6. Terminate the client. 
+                    <br> 7. Connect to another client. 
+                    <br> 8. Terminate the server as well as the client. <br> <br>
+
+                    In the second video it shows the server handling multiple clients with updated code 
+                    from the singular client section and follows a similar scenario where I make these 
+                    calls to the server:
+                    <br> 1. Establish a connection from the first client window.
+                    <br> 2. Establish a connections from the third client window.
+                    <br> 3. Establish a connection from the second client window.
+                    <br> 4. Convert number to text from the first client window.
+                    <br> 5. Convert text to number from the second client window.
+                    <br> 6. Store a word "StoredThingy" on the server from the third client window.
+                    <br> 7. Retrieve "StoredThingy" and return it to the second client window.
+                    <br> 8. Terminate the client belonging to the third client window.
+                    <br> 9. Terminate the client belonging to the first client window.
+                    <br> 10. Reconnect to the server from the first client window.
+                    <br> 11. Reconnect to the server from the third client window.
+                    <br> (3:20 is the timestamp) In this section I then show off the file system of how 
+                    the FIFO's are being created when a client connects and destroyed when a client exits. 
+                    The FIFO belonging to the server is also destroyed when terminating the server along 
+                    with the final client.
+                    <br> 12. Terminate the client belonging to the first client window and observe the 
+                    FIFO file also being deleted.
+                    <br> 13. Terminate the client belonging to the second client window and observe the 
+                    FIFO file also being deleted.
+                    <br> 14. Call to terminate the server and the final client from the third client 
+                    window and observe that the final client FIFO and the server FIFO are deleted.
+                </p>
+            </div>
+        </div>
+        <h1> Project #3: Small Programming Language </h1>
+        <!-- Section for github repo linking -->
+        <div class="gitHubRepoSection">
+            <div class="gitHubRepoSection-Link">
+                <h1> Link </h1>
+                <a href="https://github.com/Rylan-Turner/SmallProgrammingLanguage" style="font-size: 30px;"> Small Programming Language project GitHub Repo </a>
+            </div>
+            <div class="gitHubRepoSection-Summary">
+                <h1> Summary </h1>
+                <p> This project was from a college course and involved creating a small programming 
+                    language from within a high-level programming language, specifically Java. This 
+                    repository will have the instructions given by the professor, the java code used 
+                    to accomplish the goal, test cases to test the code on, and their associated outputs 
+                    given by the professor. There is also a user manual that will run down how to get 
+                    this project to work and also has pictures that display the output of my code which 
+                    has results that match with the output examples from the professor.
+                    <br>
+                    <br>
+                    Due to this project being quite old, my documentation skills within this repo are 
+                    not anywhere near what they are currently. I am planning to update the documentation 
+                    in the near future but I need to add some other projects I have worked on to my 
+                    portfolio site before that.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

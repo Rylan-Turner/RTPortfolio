@@ -1,0 +1,170 @@
+/* General site changes */
+*{
+    color: white;
+}
+body{
+    background-color: rgb(58, 50, 50);
+}
+h1{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+p{
+    padding: 10px;
+    font-size: 24px;
+}
+.navbar a{
+    padding-left:10px;
+    font-size: 24px;
+}
+
+/* This section involves the home message that explains a bit of what the site contains */
+.home{
+    display: flex;
+    justify-content: center;
+}
+@media screen and (min-width: 1px) and (max-width: 350px){
+    .home{
+        position: absolute;
+        top: 12%;
+    }
+}
+@media screen and (min-width: 351px){
+    .home{
+        position: absolute;
+        top: 22%;
+    }
+}
+
+/* This section contains a picture of myself and a summary of my journey */
+.aboutMe{
+    position: absolute;
+    top: 12%;
+}
+@media screen and (min-width: 1001px)
+{
+    .aboutMe{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 1px) and (max-width: 1000px)
+{
+    #imgOfMe{
+        display: block;
+        margin: 0 auto;
+        height: 220px;
+        width: 220px;
+    }
+}
+@media screen and (min-width: 1001px)
+{
+    #imgOfMe{
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 20px;
+        margin-right: 40px;
+    }
+}
+
+/* This section contains all of the projects being displayed via github repo or video demo */
+.gitHubRepoSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-color: white;
+}
+.gitHubRepoSection-Link{
+    text-align: center;
+}
+@media screen and (min-width: 1px) and (max-width: 1000px)
+{
+    .videoDemoSection{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        border-style: solid;
+        border-color: white;
+        flex-direction: column;
+    }
+    .videoDemo video{
+        display: block;
+        margin: 0 auto;
+        width: 280px;
+        height: 220px;
+    }
+}
+@media screen and (min-width: 1001px)
+{
+    .multipleVideos{
+        display: flex;
+        flex-direction: column;
+        margin: auto 0;
+    }
+    .videoDemoSection{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        border-style: solid;
+        border-color: white;
+        align-items: start;
+        position: relative;
+    }
+    .videoDemo video{
+        width: 480px;
+        height: 320px;
+    }
+}
+/* This section contains styling for the contact links */
+@media screen and (min-width: 901px){
+    .contactMeLinks{
+        width: 70%; 
+    }
+    .contactMeLinks div{
+        width: 90%;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 501px) and (max-width: 900px){
+    .contactMeLinks{
+        width: 70%; 
+    }
+    .contactMeLinks div{
+        width: 80%;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 500px){
+    .contactMeLinks{
+        width: 80%; 
+    }
+    .contactMeLinks div{
+        width: 90%;
+        text-align: center;
+    }
+}
+.contactMeLinks{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #131515;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.contactMeLinks:hover {
+    background-color: #3d3d45;
+}
+.contactMeIcons{
+    margin-left: 10px;
+    width: 40px;
+    height: 30px;
+}
